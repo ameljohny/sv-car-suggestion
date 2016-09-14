@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	
+		<title>SELLCAR</title>
+		<meta name="keywords" content="car buy new buynew find findcar newcar">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="css/animate.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		  <link rel="stylesheet" href="css/templatemo-style.css">
+		  
+	    <script src="js/displaydiv.js"></script>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.singlePageNav.min.js"></script>
+		<script src="js/typed.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/custom.js"></script>
+	</head>
+    <script type="text/javascript">
+        // DOM Ready
+$(function() {
+ var el, newPoint, newPlace, offset;
+ 
+ // Select all range inputs, watch for change
+ $("input[type='range']").change(function() {
+ 
+   // Cache this for efficiency
+   el = $(this);
+   
+   // Measure width of range input
+   width = el.width();
+   
+   // Figure out placement percentage between left and right of input
+   newPoint = (el.val() - el.attr("min")) / (el.attr("max") - el.attr("min"));
+   
+   // Janky value to get pointer to line up better
+   offset = -1.3;
+   
+   // Prevent bubble from going beyond left or right (unsupported browsers)
+   if (newPoint < 0) { newPlace = 0; }
+   else if (newPoint > 1) { newPlace = width; }
+   else { newPlace = width * newPoint + offset; offset -= newPoint; }
+   
+   // Move bubble
+   el
+     .next("output")
+     .css({
+       left: newPlace,
+       marginLeft: offset + "%" 
+
+
+     })
+     .text(el.val() * 100000);
+ })
+ // Fake a change to position bubble at page load
+ .trigger('change');
+});
+    </script>
+	<body id="top">
+
+		
+    
+    	<!-- start navigation -->
+		<nav class="navbar navbar-default templatemo-nav" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">Awesome</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#top">HOME</a></li>
+						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#contact">CONTACT</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- end navigation -->
+
+    	<!-- start home -->
+    	<section id="home">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-offset-2 col-md-8">
+    					<h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">FIND YOUR PERFECT CAR IN JUST <span>THREE STEPS</span></h1>
+    					<div class="element">
+                            <div class="sub-element"><strong>HOW MUCH IS YOUR BUDGET ?</strong></div>
+                            <div class="sub-element"><strong>HOW MANY MEMBERS IN YOUR CAR ?</strong></div>
+                            <div class="sub-element"><strong>HOW SHOULD IT BE ?</strong></div>
+                        </div>
+    					<a data-scroll href="#about" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.3s">GET STARTED</a>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end home -->
+
+    	<!-- start about -->
+		<section id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">OUR  <span>THREE</span> STEPS</h2>
+    				</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-mobile"></i>
+								</div>
+								<h3 class="media-heading">YOUR BUDGET</h3>
+							</div>
+							<div class="media-body">
+                                        <input  type="range" name="foo" max="500">
+                                        <output for="foo" onforminput="value = foo.valueAsNumber ;"></output>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInUp" data-wow-offset="50" data-wow-delay="0.9s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-comment-o"></i>
+								</div>
+								<h3 class="media-heading">SEATING CAPACITY</h3>
+							</div>
+							<div class="media-body">
+                                <div class="numberofseat">
+                                        <input type="range" name="foo">
+                                        <output for="foo" onforminput="value = foo.valueAsNumber;"></output>
+
+                                </div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+						<div class="media">
+							<div class="media-heading-wrapper">
+								<div class="media-object pull-left">
+									<i class="fa fa-html5"></i>
+								</div>
+								<h3 class="media-heading">VEHICLE TYPE</h3>
+							</div>
+							<div class="media-body">
+								<img src="icons/car.png">
+                                <img src="icons/car-of-hatchback-model.png">
+                                <img src="icons/sport-utility-vehicle.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end about -->
+       
+
+    	<!-- start addFilters -->
+    	<section id="addFilters">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">OUR <span>MATCHING</span> THINGS</h2>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-laptop"></i>
+    					<h4>Web Design</h4>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    				</div>
+    				<div class="col-md-4 active wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">
+    					<i class="fa fa-cloud"></i>
+    					<h4>Cloud Computing</h4>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    				</div>
+    				<div class="col-md-4 wow fadeIn" data-wow-offset="50" data-wow-delay="0.6s">
+    					<i class="fa fa-cog"></i>
+    					<h4>UX Design</h4>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Adipiscing vitae vel quam proin eget mauris eget. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end servie -->
+
+    	<!-- start results -->
+    	<section id="results">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.1s"><span>MATCHING</span> RESULTS</h2>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+    					   <img src="images/results-img1.jpg" class="img-responsive" alt="results img 1">
+                                <div class="results-overlay">
+                                    <h4>Project One</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+    				</div>
+    				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img2.jpg" class="img-responsive" alt="results img 2">
+                                <div class="results-overlay">
+                                    <h4>Project Two</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img3.jpg" class="img-responsive" alt="results img 3">
+                                <div class="results-overlay">
+                                    <h4>Project Three</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img4.jpg" class="img-responsive" alt="results img 4">
+                                <div class="results-overlay">
+                                    <h4>Project Four</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img3.jpg" class="img-responsive" alt="results img 3">
+                                <div class="results-overlay">
+                                    <h4>Project Five</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img4.jpg" class="img-responsive" alt="results img 4">
+                                <div class="results-overlay">
+                                    <h4>Project Six</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img1.jpg" class="img-responsive" alt="results img 1">
+                                <div class="results-overlay">
+                                    <h4>Project Seven</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
+                        <div class="results-thumb">
+                           <img src="images/results-img2.jpg" class="img-responsive" alt="results img 2">
+                                <div class="results-overlay">
+                                    <h4>Project Eight</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                    <a href="#" class="btn btn-default">DETAIL</a>
+                                </div>
+                        </div>
+                    </div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end results -->
+        
+
+        <div class="Findbtn-ctnr"  >
+                        <div class="find-btn" onclick="showDivs('results')" ">
+                            <span>FIND CAR</span>
+                            
+                        </div>
+        </div>
+
+    	<!-- start contact -->
+    	<section id="contact">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">CONTACT <span>AWESOME</span></h2>
+    				</div>
+    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.9s">
+    					<form action="#" method="post">
+    						<label>NAME</label>
+    						<input name="fullname" type="text" class="form-control" id="fullname">
+   						  	
+                            <label>EMAIL</label>
+    						<input name="email" type="email" class="form-control" id="email">
+   						  	
+                            <label>MESSAGE</label>
+    						<textarea name="message" rows="4" class="form-control" id="message"></textarea>
+    						
+                            <input type="submit" class="form-control">
+    					</form>
+    				</div>
+    				<div class="col-md-6 col-sm-6 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
+    					<address>
+    						<p class="address-title">OUR ADDRESS</p>
+    						<span>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</span>
+    						<p><i class="fa fa-phone"></i> +91 94884 87853</p>
+    						<p><i class="fa fa-envelope-o"></i> giridesigns5@gmail.com</p>
+    						<p><i class="fa fa-map-marker"></i> 50, Thiruvoodal Street, Thiruvannamalai - 606 601.</p>
+    					</address>
+    					<ul class="social-icon">
+    						<li><h4>WE ARE SOCIAL</h4></li>
+    						<li><a href="#" class="fa fa-facebook"></a></li>
+    						<li><a href="#" class="fa fa-twitter"></a></li>
+    						<li><a href="https://www.youtube.com/channel/UC4yzoGuKkCL_8FzI-B-x83A" class="fa fa-youtube"></a></li>
+    					</ul>
+    				</div>
+    			</div>
+    		</div>
+    	</section>
+    	<!-- end contact -->
+
+        <!-- start copyright -->
+        <footer id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
+                        Awesome &copy; Copyright 2016. Designed By Giri Designs</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end copyright -->
+
+	</body>
+</html>
