@@ -1,25 +1,53 @@
-
+html{
+	font-family: lemon ;
+}
 body
 	{
  		background: white;
  		color: #fd625e;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Goudy',Goudy,lemon,LemonMilk;
 		font-weight: 300;
 		overflow-x: hidden; /* prevent horizontal scrollbar from appearing */
 	}
-	@font-face {
+/* Font Families Included */
+
+@font-face {
 					font-family:Cartoon;
-					src: url("fonts/Cartoon Bold.ttf") format("truetype");
-		}
-	@font-face {
-    font-family: gothic;
-    src: url(fonts/SHOWG.TTF);
+					src: url("../fonts/Cartoon Bold.ttf") format("truetype");
+			}
+@font-face {
+				    font-family: Goudy;
+				    src: url(../fonts/Goudy Heavyface BT.TTF) format("truetype");
+			}
+@font-face {
+				    font-family: lemon;
+				    src: url(../fonts/LemonMilk.otf) ;
+			}
+/* Font Families Included */	
+
+/* Colors Included */
+
+.reddishtxt{
+	color:#fd6b46;
+}	
+.reddishbg{
+	background-color: #fd6b46;
 }
-	
+.blueishtxt{
+	color:#5ea9ea;
+}
+.blueishbg{
+	background-color: #5ea9ea;
+}
+
+/* Colors Included */
+
+
+
 a {
 	color: #fd625e;
+	text-decoration: none;
 }
-	
 a:hover {
 	color: #0FF;
 }
@@ -31,22 +59,23 @@ h2
 		font-size: 40px;
 		padding-bottom: 40px;
 		font-weight: bold;
+
 	}	
 h2 span
 	{
-		color: #28a7e9;
+		color: #5ea9ea;
 		font-weight: bold;
 	}
 /* end h2 */
 
-/* start about team addFilters results contact */
-#about, #team, #addFilters,
+/* start find  addFilters results contact */
+#find, #addFilters,
 #results, #contact
 	{
 		padding-top: 60px;
-		padding-bottom: 40px;
+		padding-bottom: 60px;
 	}
-/* end about team addFilters results contact */
+/* end find addFilters results contact */
 
 /* start preloader */
 .preloader
@@ -135,6 +164,13 @@ h2 span
 /* icons */	
 
 /* start nagivation */
+.logo
+{
+	height: 70px;
+	
+	float: left;
+	padding:10px; 
+}
 .navbar-default
 	{
 		background: #fff;
@@ -176,7 +212,7 @@ h2 span
 /* start home */
 #home
 	{
-		background: url('../images/home-bg.jpg') no-repeat;
+		background: url('../images/home-bg4.jpg') no-repeat;
 		background-size: cover;
 		padding-top: 160px;
 		padding-bottom: 100px;
@@ -193,7 +229,7 @@ h2 span
 	}
 #home h1 span
 	{
-		color: #3CDDC9;
+		
 		font-weight: bold;
 	}
 #home .btn
@@ -212,27 +248,32 @@ h2 span
 	}
 #home .btn:hover
 	{
-		background: #3CDDC9;
+		background:#5ea9ea ;
 		border-color: transparent;
 	}
 .element {
 	height: 60px;
 	font-size: 16px;
+	color: white;
 }
 /* end home */
 
-/* start about */
+/* start find */
 
-.media-body{
+.media-body{border: 2px #3CDDC9;
+	border-radius: 5px;
+	overflow: visible;
 
-	padding-left: 30px;
+
 }
 output { 
+	float: right;
+	overflow: visible;
 	margin: 5px;
-	padding-left: 20px;
-  position: relative;
+	
+  
   background-image: linear-gradient(top, #444444, #999999);
-  width:160px; 
+  width:50px; 
   height: 50px; 
   text-align: center; 
   color: #fd625e; 
@@ -244,32 +285,31 @@ output {
   left: 0;
   margin-left: -1%;
   border: 2px solid #38ddcd;
-  border-radius: 5px;
-}
-output:after { 
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-top: 10px solid #999999;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  top: 0%;
-  left: 50%;
-  margin-left: -5px;
-  margin-top: -1px;
-}
-.numberofseat{
-width: 50%;
-
-
+  border-radius: 100px;
 }
 
-#about .media-heading-wrapper
+.monthlydrive{
+	margin: auto;
+	width: 80%;
+	overflow: visible;
+}
+.budgetslide{
+		margin: auto;
+		width: 80%;
+		overflow: visible;
+}
+#typeofuse{
+	margin: auto;
+	width: 80%;
+	overflow: visible;
+
+}
+
+#find .media-heading-wrapper
 	{
 		padding-bottom: 32px;
 	}
-#about .media-heading-wrapper .fa
+#find .media-heading-wrapper .fa
 	{
 		border: 1px solid #fff;
 		border-radius: 2px;
@@ -282,38 +322,90 @@ width: 50%;
 		margin-bottom: 20px;
 		margin-right: 20px;
 	}
-#about .media-heading-wrapper h3
+#find .media-heading-wrapper h3
 	{
 		font-size: 18px;
 		font-weight: bold;
 		padding-top: 20px;
 		padding-left: 52px;
 	}
-/* end about */
+/* end find */
 
 /* start find btn */
-.Findbtn-ctnr{text-align: center;align-items: center;margin-bottom: 20px;
-
+.Findbtn-ctnr{
+	text-align: center;
+	align-items: center;
+	margin-bottom: 100px;
 }
-.find-btn{margin:auto;
+.find-btn{
+	margin:auto;
+	margin-top: 30px;
 	height: 50px;
 	width:100px;
 	border-radius: 5px;
-	background-color: #3CDDC9;
+	
 	color:white; 
 	box-sizing: content-box;
 	text-align: center;
+	font-size: 16px;
+
 	
 }
-.find-btn span{margin: auto;text-align: center;line-height: 50px;font-weight: bold;font-family:'Cartoon'}
+.find-btn span
+{
+	margin: auto;
+	text-align: center;
+	line-height: 50px;
+	font-weight: bold;
+	text-decoration: none;
+}
 
 
 /* end find btn */
 
 /* start addFilters */
+
+
 #addFilters
 {
 	display: none;
+	font-weight: bold;
+	font-size: 20px;
+}
+#filteradder{
+	text-decoration: none;
+	
+}
+
+
+
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #3CDDC9;
+    border: none;
+    border-radius: 3px;
+	}
+
+input[type=range]::-webkit-slider-thumb {
+  
+    background-color: #fd625e
+    color:#fd625e; 
+    border: 2px #fd625e;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+    margin-top: -4px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #fd625e;
 }
 #addFilters .col-md-4
 	{
@@ -323,11 +415,11 @@ width: 50%;
 	}
 #addFilters .col-md-4:hover
 	{
-		background: #505050;
+		background: #;
 	}
 #addFilters .active
 	{
-		background: #505050;
+		background: #;
 		padding: 40px;
 	}
 #addFilters .fa
@@ -343,7 +435,7 @@ width: 50%;
 	}
 #addFilters h4
 	{
-		color: #28a7e9;
+		color: #3CDDC9;
 		font-weight: 600;
 		padding-top: 10px;
 		padding-bottom: 14px;
@@ -372,15 +464,15 @@ width: 50%;
 	}
 #results .results-thumb .results-overlay
 	{
-		background: #3CDDC9;
+		background: white;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;	
 		width: 100%;
 		height: 100%;
-		opacity: 0;
-		position: absolute;
+		opacity: 1;
+		
 		padding: 20px 10px 20px 20px;
 		margin-left: auto;
 		margin-right: auto;
@@ -391,6 +483,7 @@ width: 50%;
 	{
 		font-weight: bold;
 		padding-bottom: 10px;
+		color:#3CDDC9;
 	}
 #results .results-thumb .results-overlay .btn
 	{
@@ -410,7 +503,14 @@ width: 50%;
 /* start contact */
 #contact
 	{
-		background: #202020;
+		
+		color: white;
+	}
+#contact h2{
+	font-size: 54px;
+}	
+#contact p{
+		font-size: 16px;
 	}
 #contact .form-control
 	{
@@ -477,7 +577,8 @@ width: 50%;
 	}
 #copyright p
 	{
-		font-weight: 400;
+		font-weight: bold;
+		font-size: 16px;
 	}
 /* end copyright */
 
@@ -527,10 +628,7 @@ width: 50%;
 
 /* start 980 media quires */
 @media only screen and ( max-width: 980px ) {
-	#team .team-wrapper
-		{
-			margin-top: 40px;
-		}
+	
 	#results .results-thumb .results-overlay
 	{
 		background: #28a7e9;
