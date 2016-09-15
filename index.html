@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 	
-		<title>SELLCAR</title>
+		<title>FindCar</title>
 		<meta name="keywords" content="car buy new buynew find findcar newcar">
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -13,70 +13,26 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/ion.rangeSlider.css" />
         <link rel="stylesheet" href="css/ion.rangeSlider.skinHTML5.css">
-        <script src="js/typed.js"></script>
-	    
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+       
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
         <script src="js/jquery.singlePageNav.min.js"></script>
 		<script src="js/wow.min.js"></script>
 		<script src="js/custom.js"></script>
-         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="js/slider.js"></script>
+        <script src="js/showDiv.js"></script>
+         
+         <script src="js/typed.js"></script>
          <script src="js/displaydiv.js"></script>
         <script src="js/ion-rangeSlider/ion.rangeSlider.js"></script>
         <link rel="stylesheet" href="css/templatemo-style.css">
 	</head>
 
-    <script type="text/javascript">
-        
-    $(document).ready(function () {
-
-
-    $("#range_budget").ionRangeSlider({
-    grid: true,
-    from: 0,
-    values: [
-        "2 lakh", "5 lakh",
-        "10 lakh", "20 lakh",
-        "30 lakh", "50 lakh",
-        "75 lakh", "1 crore",
-        "2 crore", "3 crore",
-        "above 3 crore"
-    ]
-    }); 
-
-    $("#range_km").ionRangeSlider({
-    grid: true,
-    from: 0,
-    values: [
-        "1,000 km", "2,000 km",
-        "4,000 km", "6,000 km",
-        "10,000 km", "20,000 km",
-        "above 20,000"
-    ]
-    }); 
-
-    $("#range_type").ionRangeSlider({
-    grid: true,
-    from: 0,
-    values: [
-        "Daily use", "weekends trips",
-        "performance", "utility"
-        
-    ]
-    }); 
-
-    $(".range_filter").ionRangeSlider({
-    grid: true,
-    from: 0,
-    values: [
-        "0", "1","2", "3", "4", "5", "6", "7", "8", "9"
-        
-        ]
-        }); 
-
-
-    });
-    </script>
+   
 	<body id="top">
 
 		
@@ -93,7 +49,7 @@
 						<span class="icon icon-bar"></span>
 						<span class="icon icon-bar"></span>
 					</button>
-					<a href="#" class="navbar-brand">CARspector</a>
+					<a href="#" class="navbar-brand">FindCar</a>
 				</div>
                 </div>
 				<div class="collapse navbar-collapse">
@@ -112,7 +68,7 @@
     		<div class="container">
     			<div class="row">
     				<div class="col-md-offset-2 col-md-8">
-    					<h1 class="wow fadeIn " data-wow-offset="50" data-wow-delay="0.1s">Find your perfect car in just <span class="blueishtxt">THREE STEPS</span></h1>
+    					<h1 class="wow fadeIn absender " data-wow-offset="50" data-wow-delay="0.1s">Find your perfect car in just <span class="blueishtxt lemon">THREE STEPS</span></h1>
     					<div class="element">
                             <div class="sub-element"><strong>How much is your budget ?</strong></div>
                             <div class="sub-element"><strong>How much do you drive in a month ?</strong></div>
@@ -130,7 +86,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
-    					<h2 class="wow bounceIn reddishtxt" data-wow-offset="50" data-wow-delay="0.3s">OUR  <span >THREE</span> STEPS</h2>
+    					<h2 class="wow bounceIn reddishtxt " data-wow-offset="50" data-wow-delay="0.3s">OUR  <span >THREE</span> STEPS</h2>
     				</div>
 					<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
 						<div class="media">
@@ -138,7 +94,7 @@
 								<div class="media-object pull-left">
 									
 								</div>
-								<h3 class="media-heading reddishtxt">YOUR BUDGET</h3>
+								<h3 class="media-heading reddishtxt absender">YOUR BUDGET</h3>
 							</div>
 							<div class="media-body">
                                        <div class="budgetslide"> 
@@ -155,9 +111,9 @@
 						<div class="media">
 							<div class="media-heading-wrapper">
 								<div class="media-object pull-left">
-									<i class="fa fa-comment-o"></i>
+									
 								</div>
-								<h3 class="media-heading reddishtxt">MONTHLY DRIVE (Km)</h3>
+								<h3 class="media-heading reddishtxt absender">MONTHLY DRIVE </h3>
 							</div>
 							<div class="media-body">
                                 <div class="monthlydrive">
@@ -174,9 +130,9 @@
 						<div class="media">
 							<div class="media-heading-wrapper">
 								<div class="media-object pull-left">
-									<i class="fa fa-html5"></i>
+									
 								</div>
-								<h3 class="media-heading reddishtxt">TYPE OF USAGE</h3>
+								<h3 class="media-heading reddishtxt absender">TYPE OF USAGE</h3>
 							</div>
 							<div class="media-body">
                             <div id="typeofuse">
@@ -274,10 +230,10 @@
     				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="0.1s">
                         <div class="results-thumb">
     					   <img src="images/results-img1.jpg" class="img-responsive" alt="results img 1">
-                                <div class="results-overlay">
+                                <div class="results-overlay CodeNewRomanBold">
                                     <h4>Renault Lodgy</h4>
-                                    <p> Rate </p>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget dia.</p>
+                                     <div class="rate-holder"><img class="rupee" src="images/Indian_Rupee_symbol.png"><p class="rate">2000</p></div>
+                                    <p></p>
                                     
                                 </div>
                         </div>
@@ -295,7 +251,7 @@
 
 
                         <div >
-                          <Button id="find-car" class="find-btn blueishbg " href="#results" >  <span>FIND CAR</span></a>
+                          <Button  href="#results" id="find-car" class="find-btn blueishbg "  >  <span>FIND CAR</span></a>
                             
                         </div>
                        
@@ -310,16 +266,17 @@
     				</div>
     				
     				<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInRight" data-wow-offset="50" data-wow-delay="0.6s">
-    					<address>
-    						
+    					<address >
+    						<div class="aligncenter">
     						<p><i class="fa fa-phone"></i> +91 9645643585</p>
     						<p><i class="fa fa-envelope-o"></i>something@gmail.com</p>
     						<p><i class="fa fa-map-marker"></i> MODEL ENGINEERING COLLEGE,ERNAKULAM,682030</p>
+                            </div>
     					</address>
-    					<ul class="social-icon">
+    					<ul class="social-icon  fadeInRight pull-right">
     						<li><h4>WE ARE SOCIAL</h4></li>
     						<li><a href="#" class="fa fa-facebook"></a></li>
-    						<li><a href="#" class="fa fa-twitter"></a></li>
+    						
     						<li><a href="https://www.youtube.com/channel/UC4yzoGuKkCL_8FzI-B-x83A" class="fa fa-youtube"></a></li>
     					</ul>
     				</div>
@@ -334,24 +291,13 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-                        CARspector. Designed By ABSOLUT MEC</p>
+                        findcar. Designed By ABSOLUT MEC</p>
                     </div>
                 </div>
             </div>
         </footer>
         <!-- end footer -->
-<script type="text/javascript">
-    
-   $("#filteradder").click(function(){
-    showDivs('addFilters');
-});
-
-   $("#find-car").click(function(){
-    showDivs('results');
-});
 
 
-
-</script>
 	</body>
 </html>

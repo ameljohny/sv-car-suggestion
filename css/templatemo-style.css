@@ -1,5 +1,10 @@
 html{
-	font-family: lemon ;
+	font-family:absender;
+	text-transform: none;
+	font-weight: normal;
+}
+h1,h2,h3 {
+	text-transform: none !important;
 }
 body
 	{
@@ -12,12 +17,16 @@ body
 /* Font Families Included */
 
 @font-face {
-					font-family:Cartoon;
-					src: url("../fonts/Cartoon Bold.ttf") format("truetype");
+					font-family:CodeNewRomanBold;
+					src: url("../fonts/Code New Roman b.otf") ;
 			}
 @font-face {
-				    font-family: Goudy;
-				    src: url(../fonts/Goudy Heavyface BT.TTF) format("truetype");
+					font-family:absender;
+					src: url("../fonts/absender1.ttf") ;
+			}
+@font-face {
+				    font-family: instructionsBold;
+				    src: url(../fonts/Instruction Bold.otf);
 			}
 @font-face {
 				    font-family: lemon;
@@ -39,13 +48,27 @@ body
 .blueishbg{
 	background-color: #5ea9ea;
 }
+.lemon{
+	font-family: lemon ;
+}
+.instructionsBold{
+	font-family: instructionsBold;
+}
+.CodeNewRomanBold{
+	font-family: CodeNewRomanBold;
+}
+.absender{
+	font-family: absender;
+}
 
 /* Colors Included */
 
-
+p{
+	color: black;
+}
 
 a {
-	color: #fd625e;
+	color: #5ea9ea;
 	text-decoration: none;
 }
 a:hover {
@@ -167,7 +190,6 @@ h2 span
 .logo
 {
 	height: 70px;
-	
 	float: left;
 	padding:10px; 
 }
@@ -223,7 +245,7 @@ h2 span
 		font-weight: 300;
 		font-size: 70px;
 		padding-bottom: 10px;
-		font-family: lemon ;
+		
 		color: white;
 
 	}
@@ -342,7 +364,7 @@ output {
 	margin-top: 30px;
 	height: 50px;
 	width:100px;
-	border-radius: 5px;
+	border-radius: 15px;
 	
 	color:white; 
 	box-sizing: content-box;
@@ -376,7 +398,10 @@ output {
 	text-decoration: none;
 	
 }
+#filteradder:hover{
+	color: #5ea9ea;
 
+}
 
 
 
@@ -568,6 +593,22 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 		margin-right: 10px;
 		margin-bottom: 10px;
 	}
+	.aligncenter
+	{
+		text-align: center;
+	}
+.rate-holder{
+	display: inline-block;
+	font-size: 20px;
+	border: 2px #5ea9ea !important;
+	border-radius: 10px;
+}
+.rupee{
+	height: 20px;
+}
+.rate p{
+	color: black;
+}
 /* end contact */
 
 /* start copyright */

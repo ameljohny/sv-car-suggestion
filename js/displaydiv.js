@@ -1,15 +1,4 @@
-/* To show more filters and results on click only */
-/* results and addFilters initially set display :none ;*/
 
-
-
-function showDivs(div1)
-{
-   d0 = document.getElementById(div1);
-   
-
-   d0.style.display = "block";
-}
 
 /*
 values: [
